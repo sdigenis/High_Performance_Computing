@@ -1,10 +1,21 @@
-Parallel K-Means Data Clustering
+# Parallel K-Means Data Clustering
+
+## Disclaimer
+
+THIS SOFTWARE IS NOT MINE. I HAVE USED THE CODE OF IT TO GET FAMILIAR WITH OpenMP AND VTune Profiller.<br>
+THE ONLY FILE I HAVE MODIFIED IS THE kmeans.c ALL THE OTHER FILES HAVE BEEN PROVIDED BY NORTHWESTERN UNIVERSITY.<br>
+
+## Running 
+  In order to run this software the run.sh script has written to make use of intel's  icc compiler.<br>
+  There you can make any changes in order to run the project differently.
+
+## Performance
+The software's performance was measured via intel's VTune profiler and optimized for a remoter system running two processors 16-way multicore each, 2-way SMT (hyperthreaded).
 
 The software package of parallel K-means data clustering contains the 
-a sequential version in C
+a parallel version in C <br>
 
-
-To run:
+## To run:
   * The Makefile will produce the "seq_main" executable for 
     thesequential version
 
@@ -23,8 +34,9 @@ To run:
              -d             : enable debug mode
 
 
-  * Example run commands:
+  ## Example run commands:
       # sequential K-means ----------------------------------------------------
+      ```bash
       seq_main -o -b -n 4 -i Image_data/color17695.bin
       seq_main -o -b -n 4 -i Image_data/edge17695.bin
       seq_main -o -b -n 4 -i Image_data/texture17695.bin
@@ -32,6 +44,7 @@ To run:
       seq_main -o    -n 4 -i Image_data/color100.txt
       seq_main -o    -n 4 -i Image_data/edge100.txt
       seq_main -o    -n 4 -i Image_data/texture100.txt
+      ```
 
 
 Input file format:
