@@ -11,4 +11,4 @@ These were all assignments for the HPC University course.<br>
 
 ## Disclaimer 
 
-There are possible better way of implementing these algorithms trying to achieve better running times.<br>
+There are possible better ways of implementing these algorithms trying to achieve better running times.<br>
